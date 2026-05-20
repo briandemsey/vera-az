@@ -195,41 +195,8 @@ def load_arizona_standards():
 # ============================================================================
 
 def check_password():
-    """Simple password authentication."""
-    if 'authenticated' not in st.session_state:
-        st.session_state.authenticated = False
-
-    if st.session_state.authenticated:
-        return True
-
-    st.markdown(f"""
-    <div style="text-align: center; padding: 60px 20px;">
-        <h1 style="color: {AZ_BLUE}; font-size: 3rem; margin-bottom: 10px;">VERA-AZ</h1>
-        <p style="color: #666; font-size: 1.1rem; margin-bottom: 40px;">
-            Verification Engine for Results & Accountability<br>Arizona Implementation
-        </p>
-    </div>
-    """, unsafe_allow_html=True)
-
-    col1, col2, col3 = st.columns([1, 2, 1])
-    with col2:
-        password = st.text_input("Enter access code:", type="password", key="password_input")
-        if st.button("Access VERA-AZ", use_container_width=True):
-            if password == APP_PASSWORD:
-                st.session_state.authenticated = True
-                st.rerun()
-            else:
-                st.error("Invalid access code")
-
-    st.markdown("""
-    <div style="text-align: center; margin-top: 60px; color: #999; font-size: 0.85rem;">
-        <p>VERA-AZ analyzes AASA and AZELLA data to identify Type 4 dyslexia candidates.</p>
-        <p style="margin-top: 10px;">HB 2170 "Say Dyslexia" Compliance Support</p>
-        <p style="margin-top: 10px;">Contact: brian@h-edu.solutions</p>
-    </div>
-    """, unsafe_allow_html=True)
-
-    return False
+    st.session_state.authenticated = True
+    return True
 
 
 # ============================================================================
