@@ -16,9 +16,7 @@ from datetime import datetime
 # CONFIGURATION
 # ============================================================================
 
-APP_PASSWORD = "vera2026"
-
-# Arizona colors
+APP_# Arizona colors
 AZ_BLUE = "#002868"
 AZ_RED = "#BF0A30"
 AZ_COPPER = "#C87533"
@@ -684,9 +682,6 @@ def main():
         }}
     </style>
     """, unsafe_allow_html=True)
-
-    if not check_password():
-        return
 
     districts_df = load_districts()
     azella_df = load_azella_data()
