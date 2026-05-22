@@ -192,10 +192,6 @@ def load_arizona_standards():
 # AUTHENTICATION
 # ============================================================================
 
-def check_password():
-    st.session_state.authenticated = True
-    return True
-
 
 # ============================================================================
 # TYPE 4 DETECTION
