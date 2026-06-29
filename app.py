@@ -16,7 +16,7 @@ from datetime import datetime
 # CONFIGURATION
 # ============================================================================
 
-APP_# Arizona colors
+# Arizona colors
 AZ_BLUE = "#002868"
 AZ_RED = "#BF0A30"
 AZ_COPPER = "#C87533"
